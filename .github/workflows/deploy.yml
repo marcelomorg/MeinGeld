@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Preparar arquivos
+        run: |
+          mkdir temp-build
+          cp -r frontend/index.html temp-build/
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload arquivos
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: temp-build   # diretório de publish
+
+      - name: Deploy para GitHub Pages
+        uses: actions/deploy-pages@v2
+

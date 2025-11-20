@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>MeinGeld — Conversor</title>
+  
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>MeinGeld</h1>
+
+      <!-- DE -->
+      <label for="from-currency">DE:</label>
+      <select id="from-currency">
+        <option value="EUR" selected>EUR - Euro</option>
+        <option value="USD">USD - United States Dollar</option>
+        <option value="BRL">BRL - Brazilian Real</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+      </select>
+
+      <!-- PARA -->
+      <label for="to-currency">PARA:</label>
+      <select id="to-currency">
+        <option value="BRL" selected>BRL - Brazilian Real</option>
+        <option value="USD">USD - United States Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+      </select>
+
+      <!-- VALOR CONVERTIDO -->
+      <label for="result"></label>
+      <div class="result" id="result">0.00</div>
+      <br>
+      <!-- CAMPO PARA DIGITAR VALOR -->
+      <label data-type="result"="" for="amount">Digite o valor:</label>
+      <input type="number" id="amount" placeholder="Ex: 100">
+
+      <!-- BOTÃO -->
+      <button id="convert-btn">Converter</button>
+
+      <!-- Footer -->
+      <footer>
+        &copy; 2025 MeinGeld. Criado por Marcelo Morgado.
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --text: #f0f6fc;
+  --muted: #8b949e;
+  --accent: #3fb950;
+  --accent-2: #6af583;
+  --accent-3: #9bffc8;
+  --border: #30363d;
+  --shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+h1 {
+  font-family: "Titan one", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 2.6rem;
+  background: linear-gradient(to top, var(--accent-3), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Para compatibilidade com navegadores modernos */
+  background-clip: text;
+  color: transparent;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+label[data-type="result"] {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent-3);
+}
+
+select, input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0d1117;
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s, background 0.3s;
+}
+
+select:focus, input:focus {
+  border-color: var(--accent);
+  background: #161b22;
+}
+
+.result {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: #0d1117;
+  color: var(--accent-2);
+}
+
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-3);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(63,185,80,0.4);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+@media (max-width: 414px) {
+  h1 { font-size: 1.3rem; }
+  label { font-size: 0.9rem; }
+  .result { font-size: 1.1rem; }
+  button { font-size: 0.9rem; padding: 14px; }
+}
