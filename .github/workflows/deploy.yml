@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Preparar arquivos
         run: |
@@ -27,5 +27,5 @@ jobs:
           path: temp-build   # diretório de publish
 
       - name: Deploy para GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 
